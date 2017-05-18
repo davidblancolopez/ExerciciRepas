@@ -30,6 +30,7 @@ public class Cliente {
         //
         InetAddress host = InetAddress.getByName(HOST);
         
+        //Creem el DtagramPacket per rebre el missatge.
         DatagramPacket dp = new DatagramPacket(cadena, mensaje.length(), host, PORT);
         
         //Enviem el missatge.
