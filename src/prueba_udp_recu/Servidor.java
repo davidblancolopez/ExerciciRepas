@@ -35,6 +35,9 @@ public class Servidor {
             //Creem el DatagramPacket que servira per a enviar la resposta al client.
             DatagramPacket dp2 = new DatagramPacket(frase3, frase3.length, dp.getAddress(), dp.getPort());
             
+            //Enviem la resposta.
+            ssocket.send(dp);
+            
             //Tanquem recurs.
             ssocket.close();
         }
